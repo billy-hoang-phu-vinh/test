@@ -1,28 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>{{title}}</title>
-</head>
-<body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about-us">About Us</a></li>
-                    <li><a href="/contact-us">Contact US</a></li>
-                </ul>    
-            </nav>
-        </header>
-        <main>
-            {{{body}}}
-        </main>
-        <footer>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, hic!
-            </p>
-        </footer>
-</body>
-</html>
+    <h2 class= "banner_title">Give a little WOW!</h2>
+    <div class="banner_promotion">
+      
+    </div>
+    <!-- product category section -->
+    <h2 class= "banner_title" id="category" style="color: black;">Category</h2>
+    <div class="grid-container" id="product_category">
+        
+          <!-- each item is grid-item -->
+    {{#each category_list}}
+        <div class="grid-item"><article class="col-lg-3 col-md-4 col-sm-6 col-12 listOf_items">
+        <figure>
+            <img src="{{this.IMGsource}}" alt="Image" class="img_promotion_item">
+            <figcaption>
+                <h4 class="title_promotion_item">{{this.name}}</h4>
+                <p class="description_promotion_item" ><a href="{{this.Link}}">{{this.description}}</a></p>
+                <p class="price_promotion_item"></p>
+            </figcaption>
+        </figure>
+    </article> </div>
+            {{/each}}      
+    
+          <!-- end category -->
+     
+     
+    </div>
+    {{!-- Hello --}}
+
+    <!-- Best Seller Section section -->
+    <h2 class= "banner_title" id = "bestSelling" style="color: cadetblue;">Best Selling</h2>
+    <div class="grid-container_product_page" id="product_category">
+            {{#each bestSelling}}
+            <div class="grid-item">
+              <article class="col-lg-3 col-md-4 col-sm-6 col-12 listOf_items">
+            <figure>
+                <img src="img/{{this.IMGsource}}" alt="Image" class="img_promotion_item">
+                <figcaption>
+                    <h4 class="title_promotion_item">{{this.name}}</h4>
+                    <p class="price_promotion_item">${{this.price}}</p>
+                    <p class="description_promotion_item"></p> <!-- hidden description for this section -->
+                </figcaption>
+            </figure>
+        </article> </div>
+            {{/each}}
+         
+          
+        </div>
