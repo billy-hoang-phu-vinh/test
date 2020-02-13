@@ -1,27 +1,318 @@
-*
-{
-    margin:0;
-    padding:0;
+
+/*style for navigation bar, their list*/
+#navBelt > div > div.main_navigationBar > nav > ul > li {
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 17px;
+    list-style: none;
+    box-sizing: inherit;
+    transition: all .15s ease;
+    display: flex;
+    justify-content: left;
+    background-color: transparent;
+    cursor: pointer;
+    float: left;
+    padding: 12px;
+    color:#ccc;
+    padding: 5px;
+    margin: 5px;
+}
+#navBelt, #navBar .navBelt {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    z-index: 5;
+    background-color: #232F3E;
+}
+/*set the style for logo*/
+#nav-logo > img {
+    width: 200px;
+    height: 85px;
+}
+#navBelt > div > div.main_navigationBar {
+        display: flex;
+        justify-content: left;
+        text-decoration: none;
+        background-color: transparent;
+        
+}
+/*hover for each element*/
+#navBelt > div > div.main_navigationBar > nav > ul > li:hover{
+    background-color: #2F956D;
+    color: white;
+    border-radius: 2px;
 }
 
-main
-{
-    padding: 32px;
+#navBelt > div > div.main_navigationBar > nav > ul {
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3
-{
-    margin-bottom: 16px;
+a, button {
+    transition: all 0.25s ease;
+}
+/*style for whole page*/
+body{
+    font-size: 13px;
+    line-height: 19px;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    box-sizing: border-box;
+    margin-bottom: 0!important;
+    background: #EAEDED;
+    margin: 0 auto;
+    max-width: none;
+    min-width: 1000px;
+    overflow: auto;
+    display:grid;
+}
+h2{
+    margin-block-start: 0.83em;
+    margin-block-end: 0.40em;
+}
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
-p
-{
-    margin-bottom:12px;
+/*form style here*/
+body > div.signZone {
+    width: 100%;
+    height: 700px;
+    padding: 60px;
+    text-align: left;
+    display: inherit;
 }
 
-body
-{
-    font-size: 1.1rem;
-    line-height: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+body > div.sign-box {
+    margin: 20px;
+    text-align: left;
+    width: 50%;
+    height: 250px;
+    background-color: white;
+    justify-content: center
 }
+form {
+    padding: 35px;
+    position: relative;
+    width: 50%;
+    text-align: left;
+    box-sizing: border-box;
+    border-style: ridge;
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+input {
+  width: 60%;
+  padding: 6px 6px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 6px
+}
+.signupbutton{
+  position: relative;
+  width: 100%;
+  padding: 11px 11px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 6px
+}
+/*banner*/
+.banner_title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: salmon;
+    padding-left: 35px;
+}
+.banner_promotion{
+    background-image: url('valentine.png');
+    width: 100%;
+    height: 237px;
+}
+/*product category here. listOf_items  items  list  */
+#promotion_box {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+/*title of the item: h4*/
+h4 {
+    margin-block-start: .33em;
+    margin-block-end: .33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+/*box-sizing: inherit;
+    display: inherit;
+    flex-wrap: inherit;*/
+.listOf_items {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 17px;
+    box-sizing: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 280px;
+    transition: transform 0.2s;
+}
+.listOf_items:hover {
+    transform: scale(1.2)
+}
+article > figure > figcaption > p.price_promotion_item {
+        color: brown;
+        font-size: 20px;
+}
+.img_promotion_item {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 17px;
+        box-sizing: inherit;
+        max-width: 130%;
+        height: auto;
+        margin-bottom: 20px;
+}
+
+.title{
+    padding: 16px;
+    color: 232F3E;
+}
+.box_item {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 17px;
+    box-sizing: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1120px;
+}
+
+
+/*footer css*/
+/*back to top*/
+.navFooterBackToTopText{
+    text-align: center;
+    color: grey;
+}
+#navFooter{
+    font-size: 13px;
+line-height: 19px;
+color: #111;
+font-family: "Amazon Ember",Arial,sans-serif;
+box-sizing: border-box;
+margin: 30px 0 8px 0;
+padding: 0 0 7px 0;
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 0;
+background-color: #232F3E;
+min-width: 1000px;
+position: relative;
+}
+#navBackToTop > div {
+    color: #DDD;
+    font-size: 20px;
+}
+#navFooter > div.navFooterVerticalColumn.navAccessibility {
+    font-size: 13px;
+line-height: 19px;
+color: #111;
+font-family: "Amazon Ember",Arial,sans-serif;
+box-sizing: border-box;
+max-width: 1000px;
+display: table;
+margin: 0 auto;
+}
+/*get to know us zone*/
+#navFooter > div.navFooterVerticalColumn.navAccessibility > div{
+font-family: "Amazon Ember",Arial,sans-serif;
+box-sizing: border-box;
+display: table-row;
+}
+/*style for footer head*/
+.navFooterColHead {
+    font-size: 20px;
+    text-decoration: blanchedalmond;
+    padding: 15px;
+}
+/*remove bullet style for listing in footer*/
+#navFooter > div.navFooterVerticalColumn.navAccessibility > div > div > ul {
+    list-style: none;
+    padding-left: 0px;
+}
+/*create some spaces for element in footer*/
+#navFooter > div.navFooterVerticalColumn.navAccessibility > div > div > ul > li {
+    padding: 10px;
+}
+#navFooter > div.navFooterVerticalColumn.navAccessibility > div > div {
+    
+    color: #DDD;
+    vertical-align: top;
+    line-height: 120%;
+    display: table-cell;
+
+}
+#navFooter > div:nth-child(4) {
+    box-sizing: border-box;
+font-family: "Amazon Ember",Arial,sans-serif;
+color: #767676;
+line-height: 18px;
+white-space: nowrap;
+text-align: center;
+max-width: 1000px;
+margin: 10px auto;
+font-size: 12px;
+}
+#navFooter > div.navFooterVerticalColumn.navAccessibility > div > div:nth-child(1) > ul > li{
+    padding: 10px;
+}
+/*space between*/
+#navFooter > div.navFooterVerticalColumn.navAccessibility > div > div:nth-child(3) > ul > li {
+ padding: 10px;
+}
+/*sub category*/
+#navFooter > div.navFooterLine.navFooterLinkLine.navFooterDescLine {
+    color: honeydew;
+    background-color: #131A22;
+    padding:15px;
+}
+#navFooter > div.navFooterLine.navFooterLinkLine.navFooterDescLine > table {
+    margin: 0 auto;
+}
+#navFooter > div.navFooterLine.navFooterLinkLine.navFooterPadItemLine.navFooterCopyright {
+    color: #ccc;
+    background-color: #131A22;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 0 30px;
+}
+#navFooter > div.navFooterLine.navFooterLinkLine.navFooterPadItemLine.navFooterCopyright > ul {
+    list-style: none;    
+
+}
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto; /*6 x auto = 6 item in one row*/
+
+}
+.grid-container_product_page {
+    display: inline-grid;
+    grid-template-columns: auto auto auto; 
+
+}
+ul{
+    list-style: none;
+}
+/*code not in use, but for backing up, it affects THE CONTENT OF ITEMS DISPLAY (listing items)*/
+/* *, *::before, *::after {
+    box-sizing: inherit;
+    display: inherit;
+    flex-wrap: inherit;
+} */
+
+/*product category page*/
