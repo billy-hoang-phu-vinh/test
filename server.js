@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 //creation of app object
 const app = express();
 
+//require static data
+const productModel = require("./model/product");//call javascript file that has elements inside: fakeDB, init and get()
+
 
 //handlebars middleware
 app.engine('handlebars', exphbs());
@@ -22,7 +25,9 @@ app.use(express.static("public"));
 app.get("/",(req,res)=>{
 
     res.render("home",{
-        title: "Home Page"
+        title:"Home Page",
+        category_list: productModel.getcategory_list(),
+        bestSelling: productModel.getbestseller_list()
     });
 
 });
