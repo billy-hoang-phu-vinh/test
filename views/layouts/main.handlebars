@@ -1,47 +1,151 @@
-    <h2 class= "banner_title">Give a little WOW!</h2>
-    <div class="banner_promotion">
-      
-    </div>
-    <!-- product category section -->
-    <h2 class= "banner_title" id="category" style="color: black;">Category</h2>
-    <div class="grid-container" id="product_category">
-        
-          <!-- each item is grid-item -->
-    {{#each category_list}}
-        <div class="grid-item"><article class="col-lg-3 col-md-4 col-sm-6 col-12 listOf_items">
-        <figure>
-            <img src="{{this.IMGsource}}" alt="Image" class="img_promotion_item">
-            <figcaption>
-                <h4 class="title_promotion_item">{{this.name}}</h4>
-                <p class="description_promotion_item" ><a href="{{this.Link}}">{{this.description}}</a></p>
-                <p class="price_promotion_item"></p>
-            </figcaption>
-        </figure>
-    </article> </div>
-            {{/each}}      
-    
-          <!-- end category -->
-     
-     
-    </div>
-    {{!-- Hello --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+           <!-- input title here -->
+    <title>{{title}}</title>
+   <link rel='stylesheet' href='/css/style.css' type='text/css' media='screen'>
+</head>
 
-    <!-- Best Seller Section section -->
-    <h2 class= "banner_title" id = "bestSelling" style="color: cadetblue;">Best Selling</h2>
-    <div class="grid-container_product_page" id="product_category">
-            {{#each bestSelling}}
-            <div class="grid-item">
-              <article class="col-lg-3 col-md-4 col-sm-6 col-12 listOf_items">
-            <figure>
-                <img src="img/{{this.IMGsource}}" alt="Image" class="img_promotion_item">
-                <figcaption>
-                    <h4 class="title_promotion_item">{{this.name}}</h4>
-                    <p class="price_promotion_item">${{this.price}}</p>
-                    <p class="description_promotion_item"></p> <!-- hidden description for this section -->
-                </figcaption>
-            </figure>
-        </article> </div>
-            {{/each}}
-         
-          
+<body>
+    <div id="navBar">
+        <div id="navBelt">
+        <!-- Navigation here -->
+        <div class="nav-left">
+  
+    
+      <div id="nav-logo">
+        <a href="/ref=nav_logo" class="nav-logo-link" aria-label="Amazon.ca" tabindex="6">        
+        </a>
+        <img src="img/amazonLogo.png" alt="logo amazon">
+      </div>
+
+      <div class="main_navigationBar">
+        <nav>
+            <ul>
+                      <!-- request here:/ -->
+                <li class="main_navigationBar_Element"><a href="/" class="main_navigationBar active">Home page</a></li>
+                <li class="main_navigationBar_Element"><a href="/productspage" class="main_navigationBar">Product page</a></li>
+                <li class="main_navigationBar_Element"><a href="/signup" class="main_navigationBar">Sign up</a></li>
+                <li class="main_navigationBar_Element"><a href="/signin" class="main_navigationBar">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+          </div>
+
         </div>
+    </div>
+
+    <!-- insert the specific code for each page here -->
+    <main>
+      <section>
+          {{{body}}}
+      </section>
+  </main>
+</body>
+<footer class="footer">
+<div class="navLeftFooter nav-sprite-v1" id="navFooter"><a href="/" id="navBackToTop"><div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span></div></a>
+<div class="navFooterVerticalColumn navAccessibility" role="presentation"><div class="navFooterVerticalRow navAccessibility" style="display: table-row;"><div class="navFooterLinkCol navAccessibility">
+  <div class="navFooterColHead">Get to Know Us</div><ul><li class="nav_first"><a href="https://www.amazon.jobs" class="nav_a">Careers</a></li><li>
+    <a href="/" class="nav_a">Amazon and Our Planet</a></li>
+    <li><a href="https://www.amazon.ca/ir" class="nav_a">Investor Relations</a></li><li class="nav_last"><a href="https://www.amazon.ca/pr" class="nav_a">Press Releases</a></li></ul></div>
+  <div class="navFooterColSpacerInner navAccessibility"></div>
+  <div class="navFooterLinkCol navAccessibility"><div class="navFooterColHead">Make Money with Us</div>
+  <ul>
+    <li class="nav_first"><a href="/" class="nav_a">Sell on Amazon</a></li>
+    <li><a href="https://accelerator.amazon.ca/?ref_=map_1_b2b_GW_FT" class="nav_a">Sell Under Amazon Accelerator</a></li><li><a href="https://associates.amazon.ca" class="nav_a">Amazon Associates</a></li>
+    <li><a href="/" class="nav_a">Sell on Amazon Handmade</a></li><li>
+      <a href="https://advertising.amazon.ca?ref_=a20m-hp-ft-ca" class="nav_a">Advertise Your Products</a></li>
+    <li class="nav_last"><a href="https://kdp.amazon.com?language=en_US" class="nav_a">Independently Publish with Us</a></li></ul>
+</div><div class="navFooterColSpacerInner navAccessibility"></div>
+<div class="navFooterLinkCol navAccessibility"><div class="navFooterColHead">Amazon Payment Products</div>
+<ul>
+  <li class="nav_first"><a href="/" class="nav_a">Amazon.ca Rewards Mastercard</a></li>
+  <li><a href="/" class="nav_a">Shop with Points</a></li>
+  <li><a href="/" class="nav_a">Reload Your Balance</a></li>
+  <li><a href="/" class="nav_a">Amazon Currency Converter</a></li>
+  <li>
+    <a href="/" class="nav_a">Gift Cards</a></li>
+  <li class="nav_last"><a href="/" class="nav_a">Amazon Cash</a></li></ul>
+</div>
+<div class="navFooterColSpacerInner navAccessibility"></div><div class="navFooterLinkCol navAccessibility"><div class="navFooterColHead">Let Us Help You</div>
+<ul><li class="nav_first"><a href="/" class="nav_a">Shipping Rates &amp; Policies</a></li>
+  <li><a href="/" class="nav_a">Amazon Prime</a></li><li><a href="/" class="nav_a">Returns Are Easy</a></li>
+  <li><a href="/" class="nav_a">Manage your Content and Devices</a></li><li class="nav_last"><a href="/" class="nav_a">Customer Service</a></li>
+</ul></div></div></div><div class="nav-footer-line"></div>
+<div class="navFooterLine navFooterLinkLine navFooterPadItemLine"><span><div class="navFooterLine navFooterLogoLine"><a href="/"><div class="nav-logo-base nav-sprite"></div></a></div>
+</span><ul></ul><span class="icp-container-desktop"><div class="navFooterLine">
+
+<style type="text/css">
+  #icp-touch-link-language { display: none; }
+</style>
+
+<a href="" class="icp-button a-declarative" id="icp-touch-link-language">
+  <div class="icp-nav-globe-img-2 icp-button-globe-2"></div><span class="icp-color-base">English</span><span class="nav-arrow icp-up-down-arrow"></span><span class="aok-hidden" style="display:none">Choose a language for shopping.</span>
+</a>
+<style type="text/css">
+#icp-touch-link-country { display: none; }
+</style>
+
+  
+
+
+
+<a href="/" class="icp-button a-declarative" id="icp-touch-link-country">
+  <span class="icp-flag-3 icp-flag-3-ca"></span><span class="icp-color-base">Canada</span><span class="aok-hidden" style="display:none">Choose a country/region for shopping.</span>
+</a>
+
+
+</div>
+</span><ul></ul></div>
+
+<div class="navFooterLine navFooterLinkLine navFooterDescLine"><table class="navFooterMoreOnAmazon" cellspacing="0"><tbody><tr>
+<td class="navFooterDescItem"><a href="https://music.amazon.ca?ref=dm_aff_amz_ca" class="nav_a">Amazon Music<br> <span class="navFooterDescText">Stream millions<br> of songs</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="https://advertising.amazon.ca/?ref=footer_advtsing_amzn_ca" class="nav_a">Amazon Advertising<br> <span class="navFooterDescText">Find, attract, and<br> engage customers</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="/" class="nav_a">Amazon Drive<br> <span class="navFooterDescText">Cloud storage<br> from Amazon</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&amp;sc_campaign=CA_amazonfooter" class="nav_a">Amazon Web Services<br> <span class="navFooterDescText">Scalable Cloud<br> Computing Services</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="https://www.bookdepository.com/" class="nav_a">Book Depository<br> <span class="navFooterDescText">Books With Free<br> Delivery Worldwide</span></a></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td class="navFooterDescItem"><a href="https://www.goodreads.com/" class="nav_a">Goodreads<br> <span class="navFooterDescText">Book reviews<br> &amp; recommendations</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="https://www.imdb.com/" class="nav_a">IMDb<br> <span class="navFooterDescText">Movies, TV<br> &amp; Celebrities</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="/" class="nav_a">Amazon Photos<br> <span class="navFooterDescText">Unlimited Photo Storage<br> Free With Prime</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="https://www.shopbop.com/ca/welcome" class="nav_a">Shopbop<br> <span class="navFooterDescText">Designer<br> Fashion Brands</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="/" class="nav_a">Warehouse Deals<br> <span class="navFooterDescText">Open-Box<br> Discounts</span></a></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td class="navFooterDescItem">&nbsp;</td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="https://www.wholefoodsmarket.com" class="nav_a">Whole Foods Market<br> <span class="navFooterDescText">We Believe in<br> Real Food</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="/" class="nav_a">Amazon Renewed<br> <span class="navFooterDescText">Like-new products<br> you can trust</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a href="/amazonsecondchance?_encoding=UTF8&amp;ref_=footer_asc" class="nav_a">Amazon Second Chance<br> <span class="navFooterDescText">Pass it on, trade it in,<br> give it a second life</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem">&nbsp;</td>
+</tr>
+</tbody></table></div>
+   
+<div class="navFooterLine navFooterLinkLine navFooterPadItemLine navFooterCopyright"><ul><li class="nav_first">
+  <a href="/" class="nav_a">Conditions of Use</a></li>
+  <li>
+    <a href="/" class="nav_a">Privacy Notice</a></li>
+  <li class="nav_last"><a href="/" class="nav_a">Interest-Based Ads</a></li>
+</ul><span style="padding-left: 35px;"> Hoang Phu Vinh 2020, Fake Amazon.com for Assignment01</span><ul></ul></div>
+</div>
+
+</footer>
+
+</html>
