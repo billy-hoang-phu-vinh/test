@@ -1,0 +1,53 @@
+  <section>
+  <h2 class= "banner_title" id = "bestSelling" style="color: cadetblue;">Category</h2>
+  <div class="detail_product">
+     
+      <div class ="detail_product_category" style="width: 300px;float: left;">
+        <h3>ELECTRONICS</h3>
+       <!-- subcategory of electronics--> 
+        <ul>
+          <li class=”sub_category”>Accessories & Supplies</li>
+          <li class=”sub_category”>Camera, Photo & Video</li>
+          <li class=”sub_category”>Car & Vehicle Electronics</li>
+          <li class=”sub_category”>Cell Phones & Accessories</li>
+          <li class=”sub_category”>Computers & Accessories</li>
+          <li class=”sub_category”>eBook Readers & Accessories</li>
+          <li class=”sub_category”>GPS & Navigation</li>
+          <li class=”sub_category”>Headphones</li>
+          <li class=”sub_category”>Home Audio</li>
+          <li class=”sub_category”>Portable Audio & Video</li>
+          <li class=”sub_category”>Radio Communication</li>
+          <li class=”sub_category”>Security & Surveillance</li>
+          <li class=”sub_category”>Telephones & Accessories</li>
+          <li class=”sub_category”>Televisions & Video</li>
+          <li class=”sub_category”>Wearable Technology</li>
+
+        </ul>
+
+
+
+
+      </div>
+      <div class="detail_product_list_items" style="float: left;width: auto;max-width: 1000px;">
+        <!-- products -->
+        <div class="grid-container_product_page" id="product_category">
+            {{#each products}}
+            <div class="grid-item">
+              <article class="col-lg-3 col-md-4 col-sm-6 col-12 listOf_items">
+            <figure>
+                <img src="img/{{this.IMGsource}}" alt="Image" class="img_promotion_item">
+                <figcaption>
+                    <h4 class="title_promotion_item">{{this.name}}</h4>
+                    <p class="price_promotion_item">${{this.price}}</p>
+                    <p class="description_promotion_item">{{this.description}}</p>
+                </figcaption>
+            </figure>
+        </article> </div>
+            {{/each}}
+         
+          
+        </div>
+        <!-- end products-->
+      </div>
+    </div>
+    </section>
